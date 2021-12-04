@@ -12,7 +12,7 @@ def ipot(x,y, beta=0.01, K=1):
     for i in range(n):
         for j in range(m):
             C[i,j] = cost(x[i],y[j])
-    A = torch.exp(-C*beta)
+    A = torch.exp(-C / beta)
     for t in range(50):
         Q = A * T
         for k in range(K):
